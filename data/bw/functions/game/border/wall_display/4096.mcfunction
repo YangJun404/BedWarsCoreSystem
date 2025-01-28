@@ -1,0 +1,2 @@
+execute unless score $wall_display border matches 4096.. run function bw:game/border/wall_display/2048
+execute if score $wall_display border matches 4096.. positioned ^ ^ ^409.6 run function bw:game/border/wall_display/2048

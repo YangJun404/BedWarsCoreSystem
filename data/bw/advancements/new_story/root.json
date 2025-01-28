@@ -1,0 +1,29 @@
+{
+    "criteria": {
+        "tick": {
+            "conditions": {},
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "announce_to_chat": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+        "description": {
+            "translate": "听说、了解与熟练"
+        },
+        "frame": "task",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:map"
+        },
+        "show_toast": false,
+        "title": {
+            "text": "床战"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "hurt": {
+            "trigger": "minecraft:player_hurt_entity"
+        }
+    },
+    "rewards": {
+        "function": "bw:event/player_hurt/sub/murder"
+    }
+}

@@ -1,0 +1,10 @@
+# input {Slot:BYTE}
+$execute if score @s shop_view_page matches 0 if data storage bw:shop_display/general/pg0 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:0b,Slot:$(Slot)}
+$execute if score @s shop_view_page matches 1 if data storage bw:shop_display/general/pg1 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:1b,Slot:$(Slot)}
+$execute if score @s shop_view_page matches 2 if data storage bw:shop_display/general/pg2 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:2b,Slot:$(Slot)}
+$execute if score @s shop_view_page matches 3 if data storage bw:shop_display/general/pg3 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:3b,Slot:$(Slot)}
+$execute if score @s shop_view_page matches 4 if data storage bw:shop_display/general/pg4 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:4b,Slot:$(Slot)}
+$execute if score @s shop_view_page matches 5 if data storage bw:shop_display/general/pg5 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:5b,Slot:$(Slot)}
+$execute if score @s shop_view_page matches 6 if data storage bw:shop_display/general/pg6 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:6b,Slot:$(Slot)}
+$execute if score @s shop_view_page matches 7 if data storage bw:shop_display/general/pg7 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:7b,Slot:$(Slot)}
+$execute if score @s shop_view_page matches 8 if data storage bw:shop_display/general/pg8 data[{Slot:$(Slot)b}].Item run function bw:game/chest_shop/purchase_detect/main_process {Page:8b,Slot:$(Slot)}

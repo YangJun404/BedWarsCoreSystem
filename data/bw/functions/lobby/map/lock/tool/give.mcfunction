@@ -1,0 +1,2 @@
+function bw:lobby/map/lock/tool/clear
+execute as @e[type=marker,tag=map,tag=special_map] if score @s map = $sel map if data entity @s data.map.command_area_name run item replace entity @a[team=lobby] hotbar.4 with snowball{Tags:["disable_throw","map_unlock"],display: {"Name":'{"text":"试图解锁"}'}} 1

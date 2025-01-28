@@ -1,0 +1,39 @@
+{
+    "parent": "bw:new_story/root",
+    "criteria": {
+        "below_void": {
+            "conditions": {
+                "player": {
+                    "location": {
+                        "position": {
+                            "y": {
+                                "max": -64
+                            }
+                        }
+                    }
+                }
+            },
+            "trigger": "minecraft:location"
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "众生平等，虚空可不会可怜任何人"
+        },
+        "frame": "task",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:bedrock"
+        },
+        "show_toast": true,
+        "title": {
+            "text": "坠落"
+        }
+    },
+    "requirements": [
+        [
+            "below_void"
+        ]
+    ]
+}

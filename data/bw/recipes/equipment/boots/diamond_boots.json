@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "boots",
+  "key": {
+    "X": {
+      "item": "minecraft:diamond"
+    },
+    "O": {
+      "item": "minecraft:iron_boots"
+    }
+  },
+  "pattern": [
+    " X ",
+    "XOX",
+    " X "
+  ],
+  "result": {
+    "item": "minecraft:diamond_boots"
+  },
+  "show_notification": true
+}

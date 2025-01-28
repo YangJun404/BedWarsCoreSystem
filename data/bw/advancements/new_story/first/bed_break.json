@@ -1,0 +1,29 @@
+{
+    "parent": "bw:new_story/root",
+    "criteria": {
+        "command": {
+            "conditions": {},
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "成功了！他们失去了他们的家园..."
+        },
+        "frame": "task",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:red_bed"
+        },
+        "show_toast": true,
+        "title": {
+            "text": "破床"
+        }
+    },
+    "requirements": [
+        [
+            "command"
+        ]
+    ]
+}

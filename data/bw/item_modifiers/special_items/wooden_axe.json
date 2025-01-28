@@ -1,0 +1,4 @@
+{
+    "function": "set_nbt",
+    "tag": "{AttributeModifiers:[{UUID:[I;4,0,0,1],Amount:3,AttributeName:\"generic.attack_damage\",Name:\"attack\",Slot:\"mainhand\",Operation:0},{Operation: 0, Amount: -3.12, UUID: [I;4,0,0,2], AttributeName: \"generic.attack_speed\", Name: \"generic.attackSpeed\",Slot:\"mainhand\"}],display: {Name: '{\"text\":\"木斧（工具）\"}'}}"
+}

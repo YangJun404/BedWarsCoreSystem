@@ -1,0 +1,39 @@
+{
+    "parent": "bw:new_story/root",
+    "criteria": {
+        "death":{
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "player"
+                        }
+                    }
+                ]
+            },
+            "trigger": "minecraft:entity_killed_player"
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "永远没有不受伤的传奇"
+        },
+        "frame": "task",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:chipped_anvil"
+        },
+        "show_toast": true,
+        "title": {
+            "text": "死亡"
+        }
+    },
+    "requirements": [
+        [
+            "death"
+        ]
+    ]
+}

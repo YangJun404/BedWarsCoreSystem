@@ -1,0 +1,1 @@
+clear @a[team=lobby] snowball{Tags:["disable_throw","map_unlock"],display:{Name:'{"text":"试图解锁"}'}}

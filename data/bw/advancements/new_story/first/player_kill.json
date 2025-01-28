@@ -1,0 +1,39 @@
+{
+    "parent": "bw:new_story/root",
+    "criteria": {
+        "kill_player": {
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "minecraft:player"
+                        }
+                    }
+                ]
+            },
+            "trigger": "minecraft:player_killed_entity"
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "干得好！你击杀了第一个玩家..."
+        },
+        "frame": "task",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:stone_sword"
+        },
+        "show_toast": true,
+        "title": {
+            "text": "杀戳"
+        }
+    },
+    "requirements": [
+        [
+            "kill_player"
+        ]
+    ]
+}

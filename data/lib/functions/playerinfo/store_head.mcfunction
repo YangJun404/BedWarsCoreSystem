@@ -1,0 +1,1 @@
+loot replace block 0 317 0 container.0 loot lib:get_head

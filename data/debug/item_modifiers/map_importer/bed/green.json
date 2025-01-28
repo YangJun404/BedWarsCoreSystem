@@ -1,0 +1,4 @@
+{
+    "function": "set_nbt",
+    "tag": "{EntityTag:{Tags:[\"green_team\",\"bed_marker\"]}}"
+}

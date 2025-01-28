@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "any": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "direct_entity": {
+                            "equipment": {
+                                "mainhand": {
+                                    "items": [
+                                        "minecraft:wooden_sword"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "bw:event/player_hurt/sub/0_0_wooden_sword"
+    }
+}

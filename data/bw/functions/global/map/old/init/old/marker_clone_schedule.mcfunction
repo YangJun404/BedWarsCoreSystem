@@ -1,0 +1,1 @@
+execute as @e[limit=1,tag=map_clone,type=marker] at @s run function bw:global/map/init/clone/marker_clone

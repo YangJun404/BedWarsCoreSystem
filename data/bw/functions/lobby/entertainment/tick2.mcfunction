@@ -1,0 +1,1 @@
+function bw:lobby/entertainment/explosive_egg

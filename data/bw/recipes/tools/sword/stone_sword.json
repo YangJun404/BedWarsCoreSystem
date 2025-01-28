@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "group": "sword",
+    "key": {
+        "#":{
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "tag": "bw:stone_tool_materials"
+        }
+    },
+    "pattern": [
+        " X ",
+        " X ",
+        " # "
+    ],
+    "result": {
+        "item": "minecraft:stone_sword",
+        "count": 1
+    }
+}

@@ -1,0 +1,2 @@
+# 4nd
+$tellraw @s ["             ★ ",{"text": "$(name)","clickEvent": {"action": "run_command","value": "/function debug:panel_trigger/player_control {player:$(name)}"},"hoverEvent": {"action": "show_text","value": "单击此处来操控这个玩家。"}}]

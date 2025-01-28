@@ -1,0 +1,1 @@
+loot give @s loot lib:get_head

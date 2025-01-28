@@ -1,0 +1,41 @@
+{
+    "parent": "bw:new_story/first/bed_break",
+    "criteria": {
+        "score": {
+            "conditions": {
+                "player": [
+                    {
+                        "scores":{
+                            "stat_bed_break": {
+                                "min": 10
+                                }
+                        },
+                        "condition": "entity_scores",
+                        "entity": "this"
+                    }
+                ]
+            },
+            "trigger": "minecraft:location"
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "累积破坏 10 个床"
+        },
+        "frame": "task",
+        "hidden": false,
+        "icon": {
+            "item": "minecraft:lime_glazed_terracotta"
+        },
+        "show_toast": true,
+        "title": {
+            "text": "破床 · 初窥门径"
+        }
+    },
+    "requirements": [
+        [
+            "score"
+        ]
+    ]
+}

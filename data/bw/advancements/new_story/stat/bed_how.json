@@ -1,0 +1,29 @@
+{
+    "parent": "bw:new_story/root",
+    "criteria": {
+        "command": {
+            "conditions": {},
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "display": {
+        "announce_to_chat": true,
+        "description": {
+            "text": "在一局内破坏 5 个床"
+        },
+        "frame": "task",
+        "hidden": true,
+        "icon": {
+            "item": "minecraft:lime_glazed_terracotta"
+        },
+        "show_toast": true,
+        "title": {
+            "text": "破床 · 你是怎么做到的"
+        }
+    },
+    "requirements": [
+        [
+            "command"
+        ]
+    ]
+}

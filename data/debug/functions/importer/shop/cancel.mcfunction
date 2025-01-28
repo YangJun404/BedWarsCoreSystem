@@ -1,0 +1,1 @@
+tellraw @s [{"text": "[⚠] ","color": "yellow","bold": true},{"text": "请注意！这样直接保存当前的进度... ","bold": false},{"text": "[我知道我在干什么]","bold": true,"clickEvent": {"action": "run_command","value": "/function debug:shop_import/command/cancel"}}]

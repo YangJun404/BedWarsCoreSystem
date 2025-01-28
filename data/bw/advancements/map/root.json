@@ -1,0 +1,29 @@
+{
+    "criteria": {
+        "tick": {
+            "conditions": {},
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "announce_to_chat": false,
+        "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png",
+        "description": {
+            "text":"寻找、获得与喜悦"
+        },
+        "frame": "task",
+        "hidden": true,
+        "icon": {
+            "item": "minecraft:egg"
+        },
+        "show_toast": false,
+        "title": {
+            "text": "彩蛋"
+        }
+    },
+    "requirements": [
+        [
+            "tick"
+        ]
+    ]
+}

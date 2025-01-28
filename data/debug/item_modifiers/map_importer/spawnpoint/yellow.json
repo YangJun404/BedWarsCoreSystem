@@ -1,0 +1,4 @@
+{
+    "function": "set_nbt",
+    "tag": "{EntityTag:{Tags:[\"yellow_team\",\"player_spawnpoint\"]}}"
+}

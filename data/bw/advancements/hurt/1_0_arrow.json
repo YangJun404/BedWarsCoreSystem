@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "any": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "direct_entity": {
+                            "type": "minecraft:arrow"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "bw:event/player_hurt/sub/1_1_arrow"
+    }
+}

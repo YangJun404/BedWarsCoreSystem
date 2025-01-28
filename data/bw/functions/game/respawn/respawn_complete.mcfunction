@@ -5,7 +5,6 @@ title @s times 10 70 20
 gamemode survival @s
 scoreboard players set @s respawn_time -1
 
-scoreboard players set $ respawn_time 1000
 # 发送提示
 title @s clear
 

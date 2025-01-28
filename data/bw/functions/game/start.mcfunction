@@ -4,11 +4,6 @@
 # 以中心点的位置执行游戏开始文件
 execute unless entity @s[type=marker,tag=playing_center] as @e[type=marker,tag=playing_center] if score @s map = $using map at @s run return run function bw:game/start
 
-# debug
-say game start;
-tellraw @a ["Tags // ",{"nbt":"Tags","entity": "@s"}]
-tellraw @a ["Pos // ",{"nbt":"Pos","entity": "@s"}]
-
 # 游戏规则
 ## ! 需要重置
 ## 希望一个管理员可以使用 /gamerule 来动态更改游戏规则

@@ -10,7 +10,6 @@ tellraw @a {"storage":"bw:lang","nbt":"global.init","interpret": true}
 # 清除计划任务/时钟
 schedule clear bw:lobby/map/init/clone/marker_clone
 schedule clear bw:game/mutation/game_start/trigger
-schedule clear bw:lobby/map/init
 schedule clear bw:lobby/vote/start
 
 schedule clear bw:global/clock/1tick
@@ -19,11 +18,14 @@ schedule clear bw:global/clock/10tick
 schedule clear bw:global/clock/15tick
 schedule clear bw:global/clock/20tick
 
-# 清理游戏区域和其他改动区域
-fill 0 319 0 0 318 0 air
-fill -149 -64 -149 149 45 149 air
-fill -100 43 140 101 -64 160 air
-kill @e[type=item]
+# 恢复所有可调用的模块
+function bw:global/map/control/reset_all
+
+# # 清理游戏区域和其他改动区域
+# fill 0 319 0 0 318 0 air
+# fill -149 -64 -149 149 45 149 air
+# fill -100 43 140 101 -64 160 air
+# kill @e[type=item]
 
 # 清除实体
 function bw:global/clear_entity

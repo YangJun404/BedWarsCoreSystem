@@ -1,0 +1,1 @@
+$data modify storage bw:map using set from storage bw:map maps[{id:$(id)d}]

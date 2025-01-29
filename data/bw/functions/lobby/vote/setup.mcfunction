@@ -9,35 +9,12 @@ scoreboard players operation $using map = $sel map
 # 随机地图
 execute if score $using map matches 0 run function bw:lobby/map/choice/random with storage bw:basic map
 
-# 强加载区块和游玩区域中心点
+# 加载地图中心点
+function bw:global/map/playing_area/generate_entity
 
-## 强加载
-execute store result score $x temp run data get storage bw:map using.center[0]
-execute store result score $z temp run data get storage bw:map using.center[2]
-
-# tellraw @a {"nbt":"using.center","storage": "bw:map"}
-
-execute store result storage bw:basic temp.x int 1 run scoreboard players get $x temp
-execute store result storage bw:basic temp.z int 1 run scoreboard players get $z temp
-
-function bw:lobby/vote/setup_2 with storage bw:basic temp
-
-## 游玩区域强加载
-scoreboard players add $z temp 1000
-
-execute store result storage bw:basic temp.x int 1 run scoreboard players get $x temp
-execute store result storage bw:basic temp.z int 1 run scoreboard players get $z temp
-
-function bw:lobby/vote/setup_2 with storage bw:basic temp
-
-## 生成游玩区域中心点
-tellraw @a {"nbt":"temp","storage": "bw:basic"}
-kill @e[type=marker,tag=playing_center]
-execute summon marker run function bw:lobby/vote/setup_3
-
-## 提示
-execute as @e[type=marker,tag=map_center] if score @s map = $sel map if data entity @s data.lock run scoreboard players set $fast_mode temp 1
-execute as @e[type=marker,tag=map_center] if score @s map = $sel map if data entity @s data.lock run say [地图复制系统] 当前投票中的地图正在复制中，系统正在加速复制，造成卡顿属于正常现象。
+# 快速模式
+execute if score #sys_working map = $using map run scoreboard players set $fast_mode temp 1
+execute if score #sys_working map = $using map run say [地图复制系统] 当前投票中的地图正在复制中，系统正在加速复制，造成卡顿属于正常现象。
 
 # 载入投票状态
 scoreboard players set $voting vote 1

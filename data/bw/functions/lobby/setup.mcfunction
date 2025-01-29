@@ -11,23 +11,25 @@ gamerule doFireTick true
 # 世界出生点
 setworldspawn 0 50 0 0
 
-# 记录表现分
-## 记录最高分
-execute as @a if score @s stat_score >= #rank_1 stat_score run scoreboard players operation #rank_1 stat_score = @s stat_score
-execute as @a if score @s stat_score >= #rank_2 stat_score unless score @s stat_score = #rank_1 stat_score run scoreboard players operation #rank_2 stat_score = @s stat_score
-execute as @a if score @s stat_score >= #rank_3 stat_score unless score @s stat_score = #rank_1 stat_score unless score @s stat_score = #rank_2 stat_score run scoreboard players operation #rank_3 stat_score = @s stat_score
-## 刷新排行榜
-data modify block 25 53 0 SkullOwner set value {}
-execute as @a if score @s stat_score = #rank_1 stat_score run function lib:playerinfo/name
-data modify block 23 50 6 SkullOwner.Name set from storage lib:playerinfo name
+# # 记录表现分
+# ## 记录最高分
+# execute as @a if score @s stat_score >= #rank_1 stat_score run scoreboard players operation #rank_1 stat_score = @s stat_score
+# execute as @a if score @s stat_score >= #rank_2 stat_score unless score @s stat_score = #rank_1 stat_score run scoreboard players operation #rank_2 stat_score = @s stat_score
+# execute as @a if score @s stat_score >= #rank_3 stat_score unless score @s stat_score = #rank_1 stat_score unless score @s stat_score = #rank_2 stat_score run scoreboard players operation #rank_3 stat_score = @s stat_score
+# ## 刷新排行榜
+# data modify block 25 53 0 SkullOwner set value {}
+# execute as @a if score @s stat_score = #rank_1 stat_score run function lib:playerinfo/name
+# data modify block 23 50 6 SkullOwner.Name set from storage lib:playerinfo name
 
-data modify block 25 52 1 SkullOwner set value {}
-execute as @a if score @s stat_score = #rank_2 stat_score run function lib:playerinfo/name
-data modify block 25 52 1 SkullOwner.Name set from storage lib:playerinfo name
+# data modify block 25 52 1 SkullOwner set value {}
+# execute as @a if score @s stat_score = #rank_2 stat_score run function lib:playerinfo/name
+# data modify block 25 52 1 SkullOwner.Name set from storage lib:playerinfo name
 
-data modify block 25 51 -1 SkullOwner set value {}
-execute as @a if score @s stat_score = #rank_3 stat_score run function lib:playerinfo/name
-data modify block 25 51 -1 SkullOwner.Name set from storage lib:playerinfo name
+# data modify block 25 51 -1 SkullOwner set value {}
+# execute as @a if score @s stat_score = #rank_3 stat_score run function lib:playerinfo/name
+# data modify block 25 51 -1 SkullOwner.Name set from storage lib:playerinfo name
+# 排行榜刷新
+function bw:lobby/stat/trigger
 
 # 初始化地图统计数据
 function bw:lobby/map/data_update
@@ -56,6 +58,9 @@ bossbar set countdown:spec players
 
 # 重置展示实体
 function bw:lobby/reset_display
+
+# 重置投票系统
+function bw:lobby/vote/reset
 
 # 重置规则牌
 function bw:lobby/gamerule/reset_sign

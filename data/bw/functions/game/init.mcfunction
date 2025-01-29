@@ -89,6 +89,9 @@ scoreboard objectives add round_kill killed:player "局击杀"
 scoreboard objectives remove round_death
 scoreboard objectives add round_death dummy "局死亡数"
 
+scoreboard objectives remove round_kd
+scoreboard objectives add round_kd dummy "局KD"
+
 scoreboard objectives remove round_combo
 scoreboard objectives add round_combo dummy "局连杀数"
 

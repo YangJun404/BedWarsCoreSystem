@@ -67,9 +67,9 @@ execute as @a[tag=playing] run scoreboard players operation @s stat_kill += @s r
 execute as @a[tag=playing] run scoreboard players operation @s stat_bed_break += @s round_bed_break
 
 # 本局 K/D 计算
-execute as @a run scoreboard players operation @s temp = @s round_kill
-scoreboard players operation @a temp *= $1000 const
-execute as @a run scoreboard players operation @s temp /= @s round_death
+execute as @a run scoreboard players operation @s round_kd = @s round_kill
+scoreboard players operation @a round_kd *= $1000 const
+execute as @a run scoreboard players operation @s round_kd /= @s round_death
 
 # 本局平均表现分
 execute as @a[tag=playing] run scoreboard players operation $average_score temp += @s round_score
@@ -125,10 +125,10 @@ tag @a remove playing
 scoreboard players reset @a respawn_time
 scoreboard players reset @a temp
 scoreboard players reset * respawn_time
-scoreboard players reset @a round_score
-scoreboard players reset @a round_death
-scoreboard players reset @a round_kill
-scoreboard players reset @a round_combo
+# scoreboard players reset @a round_score
+# scoreboard players reset @a round_death
+# scoreboard players reset @a round_kill
+# scoreboard players reset @a round_combo
 
 scoreboard players reset $size border 
 scoreboard players reset $countdown gaming
@@ -150,8 +150,8 @@ scoreboard players reset $green_bed team
 scoreboard players reset $yellow_bed team
 
 # 发送地图恢复请求
-execute store result storage bw:map clone.map_id int 1 run scoreboard players get $using map
-function bw:global/map/cron/request with storage bw:map clone
+execute store result storage bw:basic temp.map_id int 1 run scoreboard players get $using map
+function bw:global/map/control/request with storage bw:basic temp
 
 # 载入大厅状态
 function bw:lobby/setup

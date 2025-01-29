@@ -12,6 +12,7 @@ execute if score $working mutation = $working mutation run tellraw @s [{"text": 
 # 清理残留
 ## 系统数据
 scoreboard players reset @s rejoin_trigger
+
 ## 末影箱和物品
 clear @s[team=]
 
@@ -42,6 +43,12 @@ item replace entity @s[team=] enderchest.23 with air
 item replace entity @s[team=] enderchest.24 with air
 item replace entity @s[team=] enderchest.25 with air
 item replace entity @s[team=] enderchest.26 with air
+
+## 统计分
+scoreboard players reset @s round_score
+scoreboard players reset @s round_death
+scoreboard players reset @s round_kill
+scoreboard players reset @s round_combo
 
 # 添加玩家 id
 scoreboard players operation @s[team=!spec] player_id = $ player_id

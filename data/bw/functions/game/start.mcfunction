@@ -76,11 +76,17 @@ item replace entity @a[tag=player] enderchest.24 with air
 item replace entity @a[tag=player] enderchest.25 with air
 item replace entity @a[tag=player] enderchest.26 with air
 
-# 重置玩家货币信息
+## 重置玩家货币信息
 scoreboard players set @a own_copper 0
 scoreboard players set @a own_iron 0
 scoreboard players set @a own_gold 0
 scoreboard players set @a own_diamond 0
+
+## 统计信息刷新
+scoreboard players reset @a round_score
+scoreboard players reset @a round_death
+scoreboard players reset @a round_kill
+scoreboard players reset @a round_combo
 
 # 随机分队
 team leave @a[tag=player]
@@ -104,15 +110,8 @@ tag @a[team=spec] add playing
 
 # 随机事件
 
-###
-###     活动玩法
-###
-
+## 活动玩法
 scoreboard players set $working mutation 0
-
-###
-###     活动玩法
-###
 
 ## 抽取（大部分时间没有随机事件）（如果有了则跳过）
 execute unless score $working mutation = $working mutation run function bw:game/system_init/mutation_get

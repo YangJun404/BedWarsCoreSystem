@@ -36,7 +36,7 @@ scoreboard players set $res_diamond_max config 8
 scoreboard players set $res_copper config 3
 
 ## 起始等待时间：铁（$res_iron）
-scoreboard players set $res_iron config 32
+scoreboard players set $res_iron config 16
 
 ## 起始等待时间：钻（$res_diamond）
 scoreboard players set $res_diamond config 64

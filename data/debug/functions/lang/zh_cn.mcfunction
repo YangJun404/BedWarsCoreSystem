@@ -220,7 +220,7 @@ data modify storage bw:lang game.end.settlement.rank3 set value '["  ",{"text": 
 data modify storage bw:lang game.end.settlement.kill.nope set value '[" ",{"text": "本局击杀...你小子§6没有击杀§f！（是在偷懒吧？awa"}]'
 data modify storage bw:lang game.end.settlement.kill.count set value '[" ",{"text": "本局击杀了 §6"},{"score":{"objective": "round_kill","name": "@s"}}," 只玩家§f！"]'
 data modify storage bw:lang game.end.settlement.death set value '[" ",{"text": "本局死亡 §6"},{"score":{"objective": "round_death","name": "@s"}}," 次§f！"]'
-data modify storage bw:lang game.end.settlement.KD set value '[" ",{"text": "本局 K/D*1k："},{"score":{"objective": "temp","name": "@s"}},{"text": " | 表现分 "},{"score":{"objective": "round_score","name": "@s"}},{"text": "（本局平均分：","color": "gray"},{"score":{"name": "$average_score","objective": "temp"},"color": "gray"},{"text": "）","color": "gray"}]'
+data modify storage bw:lang game.end.settlement.KD set value '[" ",{"text": "本局 K/D*1k："},{"score":{"objective": "round_kd","name": "@s"}},{"text": " | 表现分 "},{"score":{"objective": "round_score","name": "@s"}},{"text": "（本局平均分：","color": "gray"},{"score":{"name": "$average_score","objective": "temp"},"color": "gray"},{"text": "）","color": "gray"}]'
 data modify storage bw:lang game.end.settlement.win.own set value '[" ",{"text": "本场比赛你们获得了§6胜利§f，再接再厉！"}]'
 data modify storage bw:lang game.end.settlement.win.lose set value '[" ",{"text": "本场比赛虽然失败，但是§6不要气馁，下次比赛结果会更好§f！"}]'
 data modify storage bw:lang game.end.settlement.win.nope set value '[" ",{"text": "本局比赛§6没有赢家§f！"}]'

@@ -13,3 +13,7 @@ execute as @a[scores={death=1..},team=!debug] run function bw:global/event/playe
 
 # 防止玩家丢弃物品：如果特殊物品存在 Thrower 则要求强制捡起
 execute as @e[type=item,nbt={Item:{tag:{Tags:["disable_throw"]}}}] if data entity @s Thrower run function bw:global/event/item_throw
+
+# 数据包信息说明
+scoreboard players enable @a about
+execute as @a if score @s about matches 1..2147483647 run function bw:global/about

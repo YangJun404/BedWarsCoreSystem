@@ -10,16 +10,12 @@ execute unless score $fast_mode map matches 1 if score $tps tps matches ..19 run
 execute unless score $fast_mode map matches 1 if score $tps tps matches 21.. run return run say 检测到当前 TPS 异常，主动恢复已取消。
 
 ## 系统主动恢复则打断
-execute if score #sys_working map = #sys_working map if score #checking map = #checking map run function bw:global/map/body/reset
+execute if score #sys_working map = #sys_working map if score #checking map = #checking map run function bw:global/map/control/reset_all
 
 ## 检测是否有空余
 execute unless data storage bw:map clone.control.list[0] run return run function bw:global/map/control/check
 
-# 提示
-say [系统调试信息] 静默恢复地图中，如果遇到卡顿属于正常现象！
-
 # 开始复制，优先清除
-scoreboard players set $execute_mode map 0
 data modify storage bw:map clone.control.id set from storage bw:map clone.control.list[0]
 data remove storage bw:map clone.control.list[0]
 function bw:global/map/body/trigger with storage bw:map clone.control

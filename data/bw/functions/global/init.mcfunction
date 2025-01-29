@@ -99,11 +99,20 @@ scoreboard objectives add is_input_valid dummy "输入项是否有效"
 scoreboard objectives remove tps
 scoreboard objectives add tps dummy "TPS"
 
+scoreboard objectives remove about
+scoreboard objectives add about trigger "关于这个数据包"
+
 # 队伍
 # team remove debug
 team add debug "调试"
 team modify debug collisionRule never
 team modify debug color light_purple
 
+# 重置地图复制系统
+function bw:global/map/init
+
 # 开始 tps 运算
 function bw:global/tps/start
+
+# 开始地图复制
+schedule function bw:global/map/control/check 2s replace

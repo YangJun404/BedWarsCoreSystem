@@ -6,6 +6,7 @@ execute if score $working gaming matches 0 run function bw:lobby/tick20
 execute if score $working gaming matches 1 run function bw:game/tick/20tick
 
 # 暴力的挂机检测
+#! 需要重置
 tag @a add afk_check
 tag @a[predicate=lib:sneaking] remove afk_check
 tag @a[predicate=lib:sprinting] remove afk_check
